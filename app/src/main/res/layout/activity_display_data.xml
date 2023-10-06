@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/grad_bg"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/fetchButton"
+        android:layout_width="161dp"
+        android:layout_height="79dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="575dp"
+        android:text="Fetch Data"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/jsonTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/jsonTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jsonTextView2"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:id="@+id/jsonTextView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jsonTextView3"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/jsonTextView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jsonTextView4"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/jsonTextView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jsonTextView5"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:id="@+id/jsonTextView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jsonTextView6"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/jsonTextView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jsonTextView7"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/jsonTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jsonTextView1"
+        android:layout_marginTop="20dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

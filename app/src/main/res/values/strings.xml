@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ApiLoginProject</string>
+    <string name="login_button_text">LOGIN</string>
+    <string name="password_hint">Enter Password\n</string>
+    <string name="username_hint">Enter Username</string>
+    <string name="login_text">USER LOGIN SCREEN\n</string>
+</resources>
