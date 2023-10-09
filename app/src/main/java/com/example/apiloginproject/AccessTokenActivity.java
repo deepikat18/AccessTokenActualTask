@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -23,7 +24,6 @@ public class AccessTokenActivity extends AppCompatActivity {
     private ListView listView;
     private ArrayAdapter<String> adapter;
     private ApiService apiService;
-    private final String BASE_URL = "https://yjchousing.apcfss.in/yjcapi/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class AccessTokenActivity extends AppCompatActivity {
 
         // Initialize Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl("https://yjchousing.apcfss.in/yjcapi/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -49,12 +49,11 @@ public class AccessTokenActivity extends AppCompatActivity {
 
     private void fetchDataFromApi() {
         String bearerToken = getIntent().getStringExtra("access_token");
-        Log.d("YourTag", bearerToken);
 
-//        TextView accessTokenTextView = findViewById(R.id.TvAccesToken);
-//
-//        // Set the access token in the TextView
-//        accessTokenTextView.setText("Access Token: " + accessToken);
+        TextView accessTokenTextView = findViewById(R.id.TvAccessToken);
+
+        // Set the access token in the TextView
+        accessTokenTextView.setText("Access Token: " + bearerToken);
 
 
         DataRequest dataRequest = new DataRequest("Layout", "5", "2", "05210LA002472", "0");
@@ -67,7 +66,7 @@ public class AccessTokenActivity extends AppCompatActivity {
                     List<DataResponse> dataResponses = response.body();
                     if (dataResponses != null) {
                         for (DataResponse dataResponse : dataResponses) {
-                            Log.d("Deepika", "Item: " + dataResponse.toString());
+                            Log.d("Deep", "Item: " + dataResponse.toString());
                         }
                     } else {
                         Log.d("Deep", "Response body is null");

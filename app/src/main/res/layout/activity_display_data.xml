@@ -10,15 +10,15 @@
 
 
     <Button
-        android:id="@+id/fetchButton"
-        android:layout_width="161dp"
-        android:layout_height="79dp"
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginBottom="575dp"
-        android:text="Fetch Data"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="557dp"
+        android:layout_marginBottom="83dp"
+        android:text="Next"
         android:textSize="23sp"
         android:textStyle="bold" />
 
@@ -84,6 +84,19 @@
         android:layout_below="@+id/jsonTextView1"
         android:layout_marginTop="20dp" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/fetchButton"
+        android:layout_width="161dp"
+        android:layout_height="79dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="575dp"
+        android:text="Fetch Data"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

@@ -29,6 +29,7 @@ public class DisplayDataActivity extends AppCompatActivity {
 
 
         fetchButton = findViewById(R.id.fetchButton);
+        Button nextButton = findViewById(R.id.nextButton);
         jsonTextView1 = findViewById(R.id.jsonTextView1);
         jsonTextView2 = findViewById(R.id.jsonTextView2);
         jsonTextView3 = findViewById(R.id.jsonTextView3);
@@ -37,6 +38,7 @@ public class DisplayDataActivity extends AppCompatActivity {
         jsonTextView6 = findViewById(R.id.jsonTextView6);
         jsonTextView7 = findViewById(R.id.jsonTextView7);
         jsonTextView8 = findViewById(R.id.jsonTextView8);
+
 
 
 
@@ -78,8 +80,9 @@ public class DisplayDataActivity extends AppCompatActivity {
                             String accessToken = responseData.getAccessToken();
 
                             Intent intent = new Intent(DisplayDataActivity.this, AccessTokenActivity.class);
-                            intent.putExtra("access_token", accessToken);
+
                             startActivity(intent);
+
 
                             // Display the access token in the TextView
                             jsonTextView1.setText("Status : " + status);
@@ -103,5 +106,13 @@ public class DisplayDataActivity extends AppCompatActivity {
                 });
             }
         });
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DisplayDataActivity.this, AccessTokenActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
