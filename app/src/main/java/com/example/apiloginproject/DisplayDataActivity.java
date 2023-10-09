@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,9 +27,7 @@ public class DisplayDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_data);
-
-
-        fetchButton = findViewById(R.id.fetchButton);
+            fetchButton = findViewById(R.id.fetchButton);
         Button nextButton = findViewById(R.id.nextButton);
         jsonTextView1 = findViewById(R.id.jsonTextView1);
         jsonTextView2 = findViewById(R.id.jsonTextView2);
@@ -38,9 +37,6 @@ public class DisplayDataActivity extends AppCompatActivity {
         jsonTextView6 = findViewById(R.id.jsonTextView6);
         jsonTextView7 = findViewById(R.id.jsonTextView7);
         jsonTextView8 = findViewById(R.id.jsonTextView8);
-
-
-
 
         // Initialize Retrofit
         Retrofit retrofit = new Retrofit.Builder()
@@ -79,9 +75,6 @@ public class DisplayDataActivity extends AppCompatActivity {
                             String tokenType = responseData.getTokenType();
                             String accessToken = responseData.getAccessToken();
 
-                            Intent intent = new Intent(DisplayDataActivity.this, AccessTokenActivity.class);
-
-                            startActivity(intent);
 
 
                             // Display the access token in the TextView

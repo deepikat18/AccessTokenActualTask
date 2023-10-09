@@ -30,6 +30,8 @@ public class AccessTokenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_access_token);
 
+
+
         listView = findViewById(R.id.listView);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         listView.setAdapter(adapter);
@@ -48,20 +50,24 @@ public class AccessTokenActivity extends AppCompatActivity {
     }
 
     private void fetchDataFromApi() {
-        String bearerToken = getIntent().getStringExtra("access_token");
 
-        TextView accessTokenTextView = findViewById(R.id.TvAccessToken);
 
-        // Set the access token in the TextView
-        accessTokenTextView.setText("Access Token: " + bearerToken);
+       // GlobalDeclarations.token=ATResponce.getAccessToken();
+
+        Log.d("Deepi", "onResponse: "+GlobalDeclarations.token);
+        TextView accessTokenTextView = findViewById(R.id.TvStatus);
+        accessTokenTextView.setText(GlobalDeclarations.token);
+
+
 
 
         DataRequest dataRequest = new DataRequest("Layout", "5", "2", "05210LA002472", "0");
         // Make the API call
-        Call<List<DataResponse>> call = apiService.getDataList(bearerToken, dataRequest);
+        Call<List<DataResponse>> call = apiService.getDataList(GlobalDeclarations.token, dataRequest);
         call.enqueue(new Callback<List<DataResponse>>() {
             @Override
             public void onResponse(Call<List<DataResponse>> call, Response<List<DataResponse>> response) {
+
                 if (response.isSuccessful()) {
                     List<DataResponse> dataResponses = response.body();
                     if (dataResponses != null) {
