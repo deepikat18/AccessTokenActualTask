@@ -3,26 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="horizontal">
 
-    <!-- Example TextView to display a field from YourResponseModel -->
     <TextView
-        android:id="@+id/text_view_layout_no"
-        android:layout_width="wrap_content"
+        android:id="@+id/layout_no_text_view"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Result: "
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:layout_weight="1"
+        android:text="Layout No." />
 
-    <!-- Example TextView to display another field from YourResponseModel -->
     <TextView
-        android:id="@+id/TvResMsg"
-        android:layout_width="wrap_content"
+        android:id="@+id/ben_name_text_view"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Response Msg "
-        android:textSize="16sp" />
-
-    <!-- Add more TextViews or other UI elements as needed to display your data -->
+        android:layout_weight="1"
+        android:text="Beneficiary Name" />
+    <TextView
+        android:id="@+id/Resmsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Res msg"/>
 
 </LinearLayout>
+

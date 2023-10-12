@@ -15,6 +15,9 @@
         android:theme="@style/Theme.ApiLoginProject"
         tools:targetApi="31">
         <activity
+            android:name=".ATActivity"
+            android:exported="false" />
+        <activity
             android:name=".AccessTokenActivity"
             android:exported="false" />
         <activity

@@ -33,12 +33,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
+        android:textColor="@color/black"
         android:layout_marginBottom="10dp" />
 
     <TextView
         android:id="@+id/jsonTextView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_below="@+id/jsonTextView2"
         android:layout_marginTop="11dp" />
 
@@ -46,6 +48,7 @@
         android:id="@+id/jsonTextView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_below="@+id/jsonTextView3"
         android:layout_marginTop="10dp" />
 
@@ -53,6 +56,7 @@
         android:id="@+id/jsonTextView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_below="@+id/jsonTextView4"
         android:layout_marginTop="10dp" />
 
@@ -60,12 +64,14 @@
         android:id="@+id/jsonTextView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_below="@+id/jsonTextView5"
         android:layout_marginTop="11dp" />
 
     <TextView
         android:id="@+id/jsonTextView7"
         android:layout_width="match_parent"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_below="@+id/jsonTextView6"
         android:layout_marginTop="10dp" />
@@ -74,6 +80,7 @@
         android:id="@+id/jsonTextView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_below="@+id/jsonTextView7"
         android:layout_marginTop="10dp" />
 
@@ -81,6 +88,7 @@
         android:id="@+id/jsonTextView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_below="@+id/jsonTextView1"
         android:layout_marginTop="20dp" />
     </RelativeLayout>

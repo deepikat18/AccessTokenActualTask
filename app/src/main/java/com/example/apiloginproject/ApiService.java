@@ -1,5 +1,6 @@
 package com.example.apiloginproject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.RequestBody;
@@ -19,13 +20,14 @@ public interface ApiService {
 
 
     @POST("getHouseInspectionDetailsList")
-    Call<List<ApiResponse>> getDataList(@Header("Authorization") String bearerToken, @Body DataRequest dataRequest);
-    @Headers("Content-Type: application/json")
-    @POST("https://yjchousing.apcfss.in/yjcapi/getHouseInspectionDetailsList")
-    Call<List<ApiResponse>> getHouseInspectionDetails(
-            @Header("Authorization") String accessToken,
-            @Body DataRequest request
-    );
+    Call<List<ATNewModel>> getDataList(@Header("Authorization") String bearerToken, @Body RequestBody requestBody);
+
+
+        @POST("getHouseInspectionDetailsList")
+        Call<List<ATResponse>> getHouseInspectionDetailsList(@Header("Authorization") String token, @Body RequestBody requestBody);
+
+
+
 
 
 }
