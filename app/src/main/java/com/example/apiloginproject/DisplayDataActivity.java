@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -22,7 +23,7 @@ public class DisplayDataActivity extends AppCompatActivity {
     private Button fetchButton;
     private TextView jsonTextView1,jsonTextView2,jsonTextView3,jsonTextView4,jsonTextView5,jsonTextView6,jsonTextView7,jsonTextView8;
     private ApiService apiService;
-
+    private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,9 @@ public class DisplayDataActivity extends AppCompatActivity {
         jsonTextView6 = findViewById(R.id.jsonTextView6);
         jsonTextView7 = findViewById(R.id.jsonTextView7);
         jsonTextView8 = findViewById(R.id.jsonTextView8);
+
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE);
 
         // Initialize Retrofit
         Retrofit retrofit = new Retrofit.Builder()
@@ -57,11 +61,14 @@ public class DisplayDataActivity extends AppCompatActivity {
                 loginRequest.setUsername("0679718");
                 loginRequest.setPassword("Apshcl@2022");
 
+                progressBar.setVisibility(View.VISIBLE);
+
                 // API call
                 Call<ResponseModel> call = apiService.authenticate(loginRequest);
                 call.enqueue(new Callback<ResponseModel>() {
                     @Override
                     public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                        progressBar.setVisibility(View.GONE);
                         if (response.isSuccessful() && response.body() != null) {
                             ResponseModel responseData = response.body();
 

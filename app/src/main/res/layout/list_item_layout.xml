@@ -1,29 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/layout_no_text_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Layout No." />
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    android:id="@+id/cardView"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp">
 
-    <TextView
-        android:id="@+id/ben_name_text_view"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Beneficiary Name" />
-    <TextView
-        android:id="@+id/Resmsg"
-        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Layout Name -->
+        <TextView
+            android:id="@+id/Layout_No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Layout No: Placeholder"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- San Scheme -->
+        <TextView
+            android:id="@+id/sanSchemeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="San Scheme: Placeholder"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/benID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/benName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/castName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/mandalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/schemeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <!-- Other data fields go here -->
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+    app:cardBackgroundColor="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Res msg"/>
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Layout Name -->
+        <TextView
+            android:id="@+id/Layout_No1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Layout No: Placeholder"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- San Scheme -->
+        <TextView
+            android:id="@+id/sanSchemeTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="San Scheme: Placeholder"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/benID1"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/benName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/castName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/mandalName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/schemeName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <!-- Other data fields go here -->
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
 
 </LinearLayout>
 

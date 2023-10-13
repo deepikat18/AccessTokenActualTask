@@ -23,6 +23,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText usernameEditText, passwordEditText;
     private Button loginButton;
     private SharedPreferences sharedPreferences;
+
+    private ProgressBar progressBar;
 
     // Initialize Retrofit
 
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         usernameEditText.setText("0679718");
         passwordEditText.setText("Apshcl@2022");
 
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE);
+
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://yjchousing.apcfss.in/yjcapi/YJCAPI/")
@@ -65,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
-
+                progressBar.setVisibility(View.VISIBLE);
                     // Create the request
                 UserRequset userRequest = new UserRequset("0679718","Apshcl@2022");
                 userRequest.setUsername("0679718");
@@ -77,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     call.enqueue(new Callback<LoginResponse>() {
                         @Override
                         public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                            progressBar.setVisibility(View.GONE);
                             int statusCode = response.code();
 
                             if (isValidCredentials(username, password)){
